@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qUu-vc-2Xs"/>
+                        <viewControllerLayoutGuide type="bottom" id="fWu-pe-iqr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eIF-en-8Z3" customClass="CurrencyTextField" customModule="FormattedCurrencyInput" customModuleProvider="target">
+                                <rect key="frame" x="60" y="20" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="fXq-cL-NRx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxs-RT-6ar">
+                                <rect key="frame" x="123" y="58" width="73" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="pTK-FJ-i1W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Value?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="valueButton:" destination="2" eventType="touchUpInside" id="csk-e8-MjS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lxs-RT-6ar" firstAttribute="top" secondItem="eIF-en-8Z3" secondAttribute="bottom" constant="8" symbolic="YES" id="7n4-DU-H2T"/>
+                            <constraint firstItem="lxs-RT-6ar" firstAttribute="centerX" secondItem="eIF-en-8Z3" secondAttribute="centerX" id="B5u-55-Z6j"/>
+                            <constraint firstItem="eIF-en-8Z3" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="eoh-K6-PYD"/>
+                            <constraint firstItem="eIF-en-8Z3" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" id="yeZ-rS-ve0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="eIF-en-8Z3" id="Yfn-pF-hqx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88" y="11"/>
+        </scene>
+    </scenes>
+</document>
